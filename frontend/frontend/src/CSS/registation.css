@@ -1,7 +1,4 @@
-/* LoginPage.css */
-
-
-.login-container {
+.re-container{
     width: 1000px;  /* Set your desired fixed width */
     height: 600px;  /* Set your desired fixed height */
     margin: auto;
@@ -14,7 +11,7 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-.login-container1{
+.re-container1{
     padding: 50px;
 }
 
@@ -31,32 +28,25 @@
   
 }
 
-.in-h1{
+.re-h1{
     margin-bottom: 0px;
     margin-top:125px;
 
 }
 
-.in-p{
+.re-p{
     margin-top: 0px;
     color: rgb(103, 103, 103);
     font-weight: bold;
     font-size: 13px;
 }
 
-.image{
-    width: 600px;
-    height: 600px;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
+.form-container{
+    margin-top: 30px;
 }
 
 .form-div{
     margin: 15px 0px;
-}
-
-.form-container{
-    margin-top: 30px;
 }
 
 .input-container{
@@ -91,7 +81,7 @@
     color: rgb(255, 30, 30);
 }
 
-.in-p2{
+.re-p2{
     margin: 0px;
     font-size: 14px;
 }
@@ -100,16 +90,19 @@
     color: rgb(202, 1, 1);
 }
 
-
-
-.div-check input{ 
-    width: 15px;
-    height: 15px;
-    padding-top: 5px;
-}
-
-.div-check label{
-    text-align: center;
+.inside-input{
+    margin: 0px 20px;
     font-size: 13px;
-    margin: 5px;
+    color: red;
+    text-align: right;
+   
 }
+
+.inside-input1{
+    margin: 0px 20px;
+    font-size: 13px;
+    color: greenyellow;
+    text-align: right;
+}
+
+

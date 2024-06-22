@@ -2,17 +2,38 @@ import React, { useState } from 'react';
 import '../CSS/login.css';
 import photo from '../images/l1.webp';
 import { Link } from 'react-router-dom';
-import axios from 'axios'
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 export default function Login() {
 
   const [userName , setName] = useState( "");
   const [password ,setPassword] = useState("");
+  const navigate = useNavigate();
+  const [passworVisible , setPasswordVisible] = useState(false);
+
+  
+
+  
 
   function handelSubmit(event){
     event.preventDefault();
     axios.post('http://localhost:8080/login' , {userName , password})
-    .then(res => console.log(res)).catch(err=>console.log(err));
+    .then(res => {console.log(res);
+      
+      if(res.data  === 1){
+        window.alert("login success");
+        navigate('/home');
+      }else{
+        window.alert("login fail");
+      }
+    } ).catch(err=>console.log(err));
+   
+    
+  }
+
+  const passwordVisibility =  ()=>{
+    setPasswordVisible(!passworVisible);
   }
 
   return (
@@ -28,7 +49,11 @@ export default function Login() {
                     </div>
                     <div className='form-div'>
                         
-                        <input type="password" value={password} name="password" placeholder='Password'className='input-container' onChange={e=>setPassword(e.target.value)} />
+                        <input type={passworVisible ? "text":"password"} value={password} name="password" placeholder='Password'className='input-container' onChange={e=>setPassword(e.target.value)} />
+                    </div>
+                    <div className='div-check'>
+                      <input type = "checkbox" checked = {passworVisible}  onChange={passwordVisibility}/>
+                      <label>Show Password</label>
                     </div>
                     <div className='button-container'>
                         <button type="submit" className='button1'>Login</button>
