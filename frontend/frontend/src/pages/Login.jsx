@@ -18,7 +18,7 @@ export default function Login() {
 
   function handelSubmit(event){
     event.preventDefault();
-    axios.post('http://localhost:8080/login' , {userName , password})
+    axios.post('http://localhost:8080/api/login' , {userName , password})
     .then(res => {console.log(res);
       
       if(res.data  === 1){

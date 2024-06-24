@@ -25,7 +25,7 @@ export default function navbar() {
             <li><Link to="/login">Login</Link></li>
           </div>
           <div className='li-div-sub1'>
-            <li ><Link to="/registration">Sinup</Link></li>
+            <li ><Link to="/registation">Sinup</Link></li>
           </div> 
         </div>
         
