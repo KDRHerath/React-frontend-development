@@ -4,13 +4,17 @@ import Home from  './pages/home';
 import Login from './pages/Login';
 import Registation from './pages/Registation';
 
+
+
+
 function App() {
   return (
     <div >
+      
       <BrowserRouter>
         <Routes>
           <Route index element = {<Home/>} />
-          <Route path='/home' element = {<Home/>}/>
+          
           <Route path='/login' element = {<Login/>}/>
           <Route path ='/registation' element = {<Registation/>}/>
         </Routes>

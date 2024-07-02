@@ -1,11 +1,14 @@
-import React, { useState } from 'react';
+import React, {  useState } from 'react';
 import '../CSS/login.css';
 import photo from '../images/l1.webp';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
+
 export default function Login() {
+
+
 
   const [userName , setName] = useState( "");
   const [password ,setPassword] = useState("");
@@ -32,7 +35,7 @@ export default function Login() {
     
   }
 
-  const passwordVisibility =  ()=>{
+ const passwordVisibility =  ()=>{
     setPasswordVisible(!passworVisible);
   }
 
